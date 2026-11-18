@@ -1,0 +1,7 @@
+include README.md LICENSE NOTICE THIRD_PARTY_NOTICES.md
+recursive-include docs *.md *.txt
+recursive-include native *.cpp *.hpp *.cmake *.md CMakeLists.txt
+recursive-include scripts *.py *.sh
+recursive-include tests *.py
+recursive-include src/femto_bolt_viewer/web *.html *.css *.js
+include src/femto_bolt_viewer/native_depth_engine.mm

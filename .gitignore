@@ -1,0 +1,25 @@
+.venv/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/
+# Per-camera inputs and captures are private, never release assets.
+profiles/
+nvram/
+captures/
+*.local.*
+*.bin
+*.metallib
+*.metal
+*.npz
+*.jpg
+*.png
+*.log

@@ -1,0 +1,27 @@
+OSX-Femto-Bolt
+Copyright (c) 2026 OSX-Femto-Bolt contributors
+
+Original viewer and native capture integration code was extracted from pyBravo.
+Copyright (c) 2026 pyBravo contributors
+https://github.com/kelsorj/pybravo
+
+This project's original code is licensed under the GNU General Public License,
+version 3 or (at your option) any later version. See LICENSE.
+
+Maintainer: Reed Kelso (https://github.com/kelsorj).
+The originating project's contributor credits also identify Robert Keyser and
+Tiff Cheng. This acknowledges the codebase's provenance; it does not assign
+individual authorship of particular extracted files.
+
+The standalone application has no pyBravo runtime dependency.
+
+Orbbec SDK public source and its dependencies have separate licenses. Preserve
+their notices when distributing source or linked binaries; see
+THIRD_PARTY_NOTICES.md and docs/licenses/.
+
+This is an independent, experimental community project, not an official Orbbec
+macOS driver or an Orbbec-supported product. Orbbec and Femto Bolt identify the
+compatible hardware; their names belong to their respective owners.
+
+No proprietary depth-engine binary, translated compute program, device-specific
+profile, factory calibration data, or captured camera image is included.

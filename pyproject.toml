@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osx-femto-bolt"
+version = "0.1.0a1"
+description = "Experimental native macOS RGB and depth browser viewer for Femto Bolt"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "docs/licenses/*"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "websockets>=12,<17",
+  "numpy>=1.26,<3",
+  "opencv-python-headless>=4.10,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.9", "build>=1.2", "cmake>=3.24,<4"]
+
+[project.scripts]
+femto-bolt-viewer = "femto_bolt_viewer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kelsorj/OSX-Femto-Bolt"
+Issues = "https://github.com/kelsorj/OSX-Femto-Bolt/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+femto_bolt_viewer = ["native_depth_engine.mm", "web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

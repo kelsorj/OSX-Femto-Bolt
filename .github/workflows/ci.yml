@@ -1,0 +1,23 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-14]
+        python: ['3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[dev]'
+      - run: ruff check src tests scripts
+      - run: python -m pytest
+      - run: cmake -S native -B build/core-tests -DFEMTO_CORE_TESTS_ONLY=ON
+      - run: cmake --build build/core-tests
+      - run: ctest --test-dir build/core-tests --output-on-failure
+      - run: python -m build

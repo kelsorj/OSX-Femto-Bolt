@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Femto Bolt · RGB &amp; depth</title>
+  <link rel="stylesheet" href="/viewer.css">
+  <script src="/viewer.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div><p class="eyebrow">OSX FEMTO BOLT <span>EXPERIMENTAL</span></p>
+        <h1>RGB &amp; depth</h1><p class="subtitle">Two sensors. One local view.</p></div>
+      <div class="connection"><span id="status-dot" class="dot"></span><span id="connection">Connecting…</span></div>
+    </header>
+    <aside id="demo-banner" class="notice" hidden>Synthetic demo — these images are generated. No camera is connected.</aside>
+    <aside id="error" class="error" role="status" hidden></aside>
+    <div class="toolbar">
+      <p id="mode">Waiting for camera</p>
+      <label>Depth colors <select id="range"><option value="800">150–800 mm</option><option value="2000">150–2,000 mm</option><option value="6000">150–6,000 mm</option></select></label>
+    </div>
+    <section class="views" aria-label="Camera images">
+      <article class="view"><div class="view-heading"><h2>RGB</h2><span id="rgb-size">Color sensor</span></div>
+        <div class="image-wrap"><img id="rgb" alt="Live RGB color sensor view" hidden><span id="rgb-empty">Waiting for a fresh color frame</span></div>
+        <p class="caption">Native color view</p>
+      </article>
+      <article class="view"><div class="view-heading"><h2>Depth</h2><span id="depth-size">Distance in millimeters</span></div>
+        <div class="image-wrap"><img id="depth" alt="Live depth sensor view, colored by distance" hidden><span id="depth-empty">Waiting for a fresh depth frame</span></div>
+        <div class="legend"><div></div><p><span>150 mm</span><span id="max-mm">800 mm</span></p></div>
+      </article>
+    </section>
+    <dl class="metrics">
+      <div><dt>Depth rate</dt><dd id="fps">—</dd></div><div><dt>Conversion</dt><dd id="conversion">—</dd></div>
+      <div><dt>Frame age</dt><dd id="age">—</dd></div><div><dt>Pair offset</dt><dd id="pair">—</dd></div>
+      <div><dt>Valid depth</dt><dd id="valid">—</dd></div>
+    </dl>
+    <footer><p>These are independent sensor views with different fields of view. They are not pixel aligned.
+      Black depth pixels have no valid reading. Colors outside the selected interval use its end colors; the measurements are unchanged.</p>
+      <p id="diagnostic">The viewer stays on this computer.</p></footer>
+  </main>
+</body>
+</html>
