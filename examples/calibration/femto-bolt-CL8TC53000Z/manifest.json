@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "owner_shared_factory_calibration_reference",
+  "camera_model": "Orbbec Femto Bolt",
+  "camera_serial": "CL8TC53000Z",
+  "contributed_by": "kelsorj",
+  "publication_date": "2026-11-18",
+  "file": "calibration.ccb",
+  "bytes": 485616,
+  "sha256": "a566624a8fe99e4e8c3362ff58025e8c53affa5badc632a49b7a0bc5932f0267",
+  "source": {
+    "acquisition": "Factory calibration read from the owner's camera using the native NVRAM probe",
+    "identical_factory_reads": 4,
+    "sdk_source_revision": "575347ca742d219ef61b1e214e97043f17f48d23",
+    "transport_envelope_padding_and_usb_metadata_removed": true,
+    "blob_bytes_modified": false
+  },
+  "factory_header_fields": {
+    "firmware_version_field": "6109.11",
+    "internal_unit_field": "2525-0041746",
+    "sensor_field": "P8N800.00_5_9_19"
+  },
+  "structural_checks": {
+    "ccb_record_count": 99,
+    "record_block_counts": {
+      "0x41": 1,
+      "0x46": 7,
+      "0x47": 1,
+      "0x49": 7,
+      "0x4c": 1,
+      "0x50": 16,
+      "0x53": 16,
+      "0x54": 48,
+      "0x56": 1,
+      "0xd7": 1
+    },
+    "bounded_record_chain_consumes_blob": true,
+    "decoded_mode_checks": {
+      "nfov": {
+        "thermal_and_illumination_parser_passed": true,
+        "height": 576,
+        "width": 640,
+        "illumination_mask_pixels": 303962
+      },
+      "wfov-binned": {
+        "thermal_and_illumination_parser_passed": true,
+        "height": 512,
+        "width": 512,
+        "illumination_mask_pixels": 205743
+      }
+    },
+    "all_record_semantics_decoded": false
+  },
+  "limitations": {
+    "reference_only": true,
+    "absolute_depth_accuracy_verified": false,
+    "cross_unit_accuracy_verified": false,
+    "complete_native_depth_profile": false,
+    "includes_depth_compute_programs": false
+  },
+  "disclaimer": "Reference factory calibration from one Femto Bolt. It is not calibrated for other cameras. Anyone experimenting with it must independently verify depth accuracy across their distances, surfaces, operating temperatures and acquisition modes before relying on measurements. Provided as-is without any accuracy guarantee or warranty. This sample does not include native depth-conversion programs or constitute a complete runnable depth profile."
+}

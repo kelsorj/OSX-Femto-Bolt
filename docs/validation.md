@@ -57,4 +57,9 @@ after testing.
 - RGB and depth are separate native views. Registration is not implemented here.
 - Intel Macs are not supported.
 
-No camera calibration, profiles, recordings, or scene images accompany this report.
+The original developer-preview validation used private resources. A subsequent
+owner-approved [factory-calibration sample](../examples/calibration/femto-bolt-CL8TC53000Z/README.md)
+is now published for reference. Its checksum, complete 99-record container, and
+NFOV/WFOV thermal and illumination parsing were checked. This adds no accuracy
+validation for other units. No complete native profiles, recordings or scene
+images accompany this report.

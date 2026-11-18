@@ -5,10 +5,16 @@ The viewer runs locally and displays the camera in a web browser. USB acquisitio
 and depth processing run on macOS; no Docker or Linux runtime is used.
 
 **Current limitation:** live depth requires a compatible native profile and
-factory calibration data for your particular camera. These files are not included,
-and this repository does not yet generate a profile for an arbitrary new Bolt.
+factory calibration data for your particular camera. An
+[owner-shared reference calibration](examples/calibration/femto-bolt-CL8TC53000Z/README.md)
+is included for experimentation, with an independent-validation disclaimer.
+It is not calibrated for other cameras and does not include depth-conversion
+programs. This repository does not yet generate a profile for an arbitrary new Bolt.
 You can build the public code and try the synthetic demo without those files.
 This is a developer release, not a turnkey macOS driver.
+
+The shared sample is never used automatically. Anyone experimenting with it must
+verify accuracy on their own hardware before relying on measurements.
 
 ## Requirements
 

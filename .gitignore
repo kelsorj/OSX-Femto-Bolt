@@ -11,7 +11,8 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
-# Per-camera inputs and captures are private, never release assets.
+# Local inputs stay private. The explicitly owner-approved reference CCB under
+# examples/calibration/ is the sole published camera-data sample.
 profiles/
 nvram/
 captures/

@@ -23,5 +23,8 @@ This is an independent, experimental community project, not an official Orbbec
 macOS driver or an Orbbec-supported product. Orbbec and Femto Bolt identify the
 compatible hardware; their names belong to their respective owners.
 
-No proprietary depth-engine binary, translated compute program, device-specific
-profile, factory calibration data, or captured camera image is included.
+One factory-calibration reference sample from the maintainer's Femto Bolt is
+published with the owner's explicit permission under examples/calibration/.
+Its README records provenance, limitations and the requirement for independent
+validation. No proprietary depth-engine binary, translated compute program,
+complete native profile, or captured scene image is included.

@@ -45,7 +45,10 @@ in control of the public components; extension use and distribution have separat
 conditions and restrictions.
 
 This repository does not include proprietary extension binaries, translated vendor
-compute shaders, native profile resources, or device factory calibration. A user's
-ability to run a local resource does not establish permission to publish it.
+compute shaders, or complete native compute profiles. One owner-approved
+[factory-calibration reference sample](examples/calibration/femto-bolt-CL8TC53000Z/README.md)
+is published separately as data with its provenance and limitations. This sample
+does not include vendor compute programs or grant rights to separate software.
+A user's ability to run a local resource does not establish permission to publish it.
 Contributions and releases must identify the provenance and applicable permissions
 of any additional resource before including it.
